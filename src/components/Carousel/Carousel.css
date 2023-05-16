@@ -9,7 +9,9 @@
 
 .inner {
     transition: transform 0.3s;
+    display: flex;
 }
+
 
 .carousel-item {
     height: 700px;
