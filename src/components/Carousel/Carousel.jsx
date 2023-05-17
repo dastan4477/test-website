@@ -38,33 +38,46 @@ const Carousel = () => {
 
   return (
     <div className="carousel">
-      <div
-        className="inner"
-        style={{ transform: `translate(-${currentIndex * 100}%)` }}
-      >
-        {items.map((item) => {
-          return <CarouselItem item={item} width={"100%"} />;
-        })}
+
+      <div className="wrapper" style={{ transform: `translate(-${currentIndex * 100}%)` }}>
+
+        <div className="inner">
+          {items.map((item) => {
+            return <CarouselItem item={item} />;
+          })}
+        </div>
+        
       </div>
+
+
       <div className="arrow-buttons">
+
+
         <button
           onClick={() => {
             updateIndex(currentIndex - 1);
           }}
-          className="arrow-button"
+          className="arrow-button left"
         >
           <span class="material-symbols-outlined">arrow_back_ios</span>
         </button>
+
+
         <button
           onClick={() => {
             updateIndex(currentIndex + 1);
           }}
-          className="arrow-button"
+          className="arrow-button right"
         >
           <span class="material-symbols-outlined">arrow_forward_ios</span>
         </button>
+
+
       </div>
+
+
       <div className="indicators">
+
         {items.map((item, index) => {
           return (
             <button
@@ -79,7 +92,10 @@ const Carousel = () => {
             </button>
           );
         })}
+
       </div>
+
+
     </div>
   );
 };

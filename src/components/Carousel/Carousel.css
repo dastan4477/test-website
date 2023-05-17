@@ -1,23 +1,70 @@
 .carousel {
+    width: 100vw;
     overflow: hidden;
-    width: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: auto;
 }
 
-.inner {
+.wrapper {
     transition: transform 0.3s;
+}
+
+.inner {
     display: flex;
+    white-space: nowrap;
+    width: 300vw;
+}
+
+.content-wrapper {
+    width: 600px;
 }
 
 
 .carousel-item {
+    padding: 0px 30px;
+    white-space: normal;
+    width: 100vw;
     height: 700px;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.carousel-button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
+.carousel-item > p {
+
+}
+
+.arrow-button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    border: none;
+    background-color: transparent;
+    padding: 0px 30px;
+}
+
+.arrow-button > span {
+    font-size: 35px;
+}
+
+.left {
+    left: 0;
+}
+
+
+.right {
+    right: 0;
 }
